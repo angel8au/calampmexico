@@ -1,0 +1,173 @@
+html,
+body,
+header,
+#intro {
+    height: 90%;
+}
+
+.azuldogo {
+    background-color: #122344 !important; }
+
+.fafafa {
+        background-color: #fafafa !important; }
+
+#intro {
+    background: url("images/Fondo agencia publicidad online.jpg")no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.azuldogo {
+  color: #122344; !important; }
+
+.gris-text {
+  color: rgba(0, 0, 0, 0.48); !important; }
+
+
+.display-header-dogo {
+  font-family: 'Merriweather', serif;
+  font-style: black;
+  font-weight: 900;
+  font-weight: Black;
+  line-height: 130%;
+  font-size: 36px;
+  text-align: left;
+  ;
+}
+
+.display-header-dogo2 {
+  font-family: 'Merriweather', serif;
+  font-style: black;
+  font-weight: 500;
+  font-weight: black;
+  line-height: 130%;
+  font-size: 20px;
+  text-align: left;
+  ;
+}
+
+.display-header-dogo3 {
+  font-family: 'Merriweather', serif;
+  font-style: black;
+  font-weight: 500;
+  font-weight: black;
+  line-height: 130%;
+  font-size: 20px;
+  text-align: left;
+  ;
+}
+
+.display-roboto2 {
+  font-family: 'Roboto', sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-weight: normal;
+  line-height: 110%;
+  font-size: 16px;
+  text-align: left;
+  text-transform: uppercase;
+  ;
+}
+
+
+@media (min-width: 576px) {
+  .display-header-dogo {
+    font-family: 'Merriweather', serif;
+    font-style: black;
+    font-weight: 900;
+    font-weight: Black;
+    line-height: 130%;
+    font-size: 36px;
+    text-align: left;
+    ;
+}
+.display-header-dogo2 {
+  font-family: 'Merriweather', serif;
+  font-style: black;
+  font-weight: 500;
+  font-weight: black;
+  line-height: 130%;
+  font-size: 24px;
+  text-align: left;
+  ;
+}
+}
+
+@media (min-width: 768px) {
+  .display-header-dogo {
+    font-family: 'Merriweather', serif;
+    font-style: black;
+    font-weight: 900;
+    font-weight: Black;
+    line-height: 130%;
+    font-size: 48px;
+    text-align: left;
+    ;
+}
+.display-header-dogo2 {
+  font-family: 'Merriweather', serif;
+  font-style: black;
+  font-weight: 500;
+  font-weight: black;
+  line-height: 130%;
+  font-size: 24px;
+  text-align: left;
+  ;
+}
+.display-header-dogo3 {
+  font-family: 'Merriweather', serif;
+  font-style: black;
+  font-weight: 500;
+  font-weight: black;
+  line-height: 130%;
+  font-size: 36px;
+  text-align: left;
+  ;
+  }
+
+@media (min-width: 980px) {
+  .display-header-dogo {
+    font-family: 'Merriweather', serif;
+    font-style: black;
+    font-weight: 900;
+    font-weight: Black;
+    line-height: 130%;
+    font-size: 48px;
+    text-align: left;
+    ;
+}
+.display-header-dogo2 {
+  font-family: 'Merriweather', serif;
+  font-style: black;
+  font-weight: 500;
+  font-weight: black;
+  line-height: 130%;
+  font-size: 36px;
+  text-align: left;
+  ;
+}
+
+.display-header-dogo3 {
+  font-family: 'Merriweather', serif;
+  font-style: black;
+  font-weight: 500;
+  font-weight: black;
+  line-height: 130%;
+  font-size: 48px;
+  text-align: left;
+  ;
+  }
+
+  .display-roboto2 {
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-weight: normal;
+    line-height: 130%;
+    font-size: 27px;
+    text-align: left;
+    text-transform: uppercase;
+    ;
+  }
