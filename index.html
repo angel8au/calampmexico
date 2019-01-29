@@ -16,6 +16,7 @@
   <link href="css/mdb.min.css" rel="stylesheet">
   <!-- Your custom styles (optional) -->
   <link href="css/style.css" rel="stylesheet">
+  <script> function createFcn(nm){(window.freshsales)[nm]=function(){(window.freshsales).push([nm].concat(Array.prototype.slice.call(arguments,0)))}; } (function(url,appToken,formCapture){window.freshsales=window.freshsales||[];if(window.freshsales.length==0){list='init identify trackPageView trackEvent set'.split(' ');for(var i=0;i<list.length;i++){var nm=list[i];createFcn(nm);}var t=document.createElement('script');t.async=1;t.src='//d952cmcgwqsjf.cloudfront.net/assets/analytics.js';var ft=document.getElementsByTagName('script')[0];ft.parentNode.insertBefore(t,ft);freshsales.init("https://crmcttmx.freshsales.io","319b1daada6ee02a96b3ef05233d7a6fe1c5876affe603e15f254e922d7bef8b",true);}})();</script>
 </head>
 
 <body>
@@ -401,7 +402,7 @@ Adquiere equipos GPS para tu flotilla y obtén precio especial. Los equipos Cal
                   <!-- Grid column -->
                   <div class="col-lg-12 ">
 
-                    <div class="card-body form">
+                    <form class="card-body form needs-validation" id="quote_request" novalidate>
 
                       <!-- Header -->
                       <h3 class="mt-4 h2-responsive text-center ">SOLICITA COTIZACIÓN</h3>
@@ -413,8 +414,17 @@ Adquiere equipos GPS para tu flotilla y obtén precio especial. Los equipos Cal
                         <!-- Grid column -->
                         <div class="col-md-6">
                           <div class="md-form mb-0">
-                            <input type="text" id="form-contact-name" class="form-control">
-                            <label for="form-contact-name" class="">Nombre</label>
+                            <input
+                              type="text"
+                              name="lead[first_name]"
+                              id="lead[first_name]"
+                              class="form-control"
+                              required
+                            />
+                            <label for="lead[first_name]" class="">Nombre</label>
+                            <div class="invalid-feedback">
+                              Este campo es requerido
+                            </div>
                           </div>
                         </div>
                         <!-- Grid column -->
@@ -422,8 +432,17 @@ Adquiere equipos GPS para tu flotilla y obtén precio especial. Los equipos Cal
                         <!-- Grid column -->
                         <div class="col-md-6">
                           <div class="md-form mb-0">
-                            <input type="text" id="form-contact-email" class="form-control">
-                            <label for="form-contact-email" class="">Apellido</label>
+                            <input
+                              type="text"
+                              name="lead[last_name]"
+                              id="lead[last_name]"
+                              class="form-control"
+                              required
+                            />
+                            <label for="lead[last_name]" class="">Apellido</label>
+                            <div class="invalid-feedback">
+                              Este campo es requerido
+                            </div>
                           </div>
                         </div>
                         <!-- Grid column -->
@@ -437,8 +456,19 @@ Adquiere equipos GPS para tu flotilla y obtén precio especial. Los equipos Cal
                         <!-- Grid column -->
                         <div class="col-md-6">
                           <div class="md-form mb-0">
-                            <input type="text" id="form-contact-phone" class="form-control">
-                            <label for="form-contact-phone" class="">Teléfono / Celular</label>
+                            <input
+                              type="tel"
+                              name="lead[mobile_number]"
+                              id="lead[mobile_number]"
+                              class="form-control"
+                              maxlength="10"
+                              pattern="[0-9]{10}"
+                              required
+                            />
+                            <label for="lead[mobile_number]" class="">Teléfono / Celular</label>
+                            <div class="invalid-feedback">
+                              Ingrese los 10 dígitos de su teléfono
+                            </div>
                           </div>
                         </div>
                         <!-- Grid column -->
@@ -446,46 +476,77 @@ Adquiere equipos GPS para tu flotilla y obtén precio especial. Los equipos Cal
                         <!-- Grid column -->
                         <div class="col-md-6">
                           <div class="md-form mb-0">
-                            <input type="text" id="form-contact-email" class="form-control">
-                            <label for="form-contact-company" class="">Email</label>
+                            <input
+                              type="email"
+                              name="lead[email]"
+                              id="lead[email]"
+                              class="form-control"
+                              required
+                            />
+                            <label for="lead[email]" class="">Email</label>
+                            <div class="invalid-feedback">
+                              Ingrese un correo electrónico válido
+                            </div>
                           </div>
                         </div>
                         <!-- Grid column -->
                         <div class="col-md-6">
                           <div class="md-form mb-0">
-                            <input type="text" id="form-contact-company" class="form-control">
-                            <label for="form-contact-company" class="">Empresa</label>
+                            <input
+                              type="text"
+                              name="lead[company][name]"
+                              id="lead[company][name]"
+                              class="form-control"
+                            />
+                            <label for="lead[company][name]" class="">Empresa</label>
                           </div>
                         </div>
                         <div class="col-md-6 mb-4">
                           <div class="md-form mb-0">
-                            <input type="text" id="form-contact-company" class="form-control">
-                            <label for="form-contact-company" class="">Puesto</label>
+                            <input
+                              type="text"
+                              name="lead[job_title]"
+                              id="lead[job_title]"
+                              class="form-control"
+                            />
+                            <label for="lead[job_title]" class="">Puesto</label>
                           </div>
                         </div>
 
 
 
                         <div class="col-md-6 mb-4">
-
-
-                          <select class="browser-default custom-select">
-                            <option selected>Modelo de equipo solicitado</option>
-                            <option value="1">GPS-LMU 330</option>
-                            <option value="2">GPS-LMU 2630</option>
-                            <option value="3">GPS-TTU 2840</option>
+                          <div class="form-group">
+                            <select
+                              class="browser-default custom-select"
+                              name="lead[deal][name]"
+                              id="lead[deal][name]"
+                              required
+                            >
+                              <option value="" selected>Modelo de equipo solicitado</option>
+                              <option value="GPS-LMU 330">GPS-LMU 330</option>
+                              <option value="GPS-LMU 2630">GPS-LMU 2630</option>
+                              <option value="GPS-TTU 2840">GPS-TTU 2840</option>
                             </select>
+                            <div class="invalid-feedback">Seleccione un modelo de equipo</div>
+                          </div>
                         </div>
                         <div class="col-md-6 mb-4">
-
-
-                          <select class="browser-default custom-select">
-                            <option selected>Cantidad</option>
-                            <option value="1">1-49</option>
-                            <option value="2">50-99</option>
-                            <option value="3">100-499</option>
-                            <option value="3">500+</option>
-                          </select>
+                          <div class="form-group">
+                            <select
+                              class="browser-default custom-select"
+                              name="lead[deal][amount]"
+                              id="lead[deal][amount]"
+                              required
+                            >
+                              <option value="" selected>Cantidad</option>
+                              <option value="1">1-49</option>
+                              <option value="50">50-99</option>
+                              <option value="100">100-499</option>
+                              <option value="500">500+</option>
+                            </select>
+                            <div class="invalid-feedback">Seleccione una cantidad</div>
+                          </div>
                         </div>
 
                       </div>
@@ -497,15 +558,14 @@ Adquiere equipos GPS para tu flotilla y obtén precio especial. Los equipos Cal
                         <!-- Grid column -->
                         <div class="col-md-12 mt-5">
 
-                            <a class="btn btn-cyan">
+                            <button class="btn btn-cyan">
                               Enviar
-                            </a>
+                            </button>
 
                           </div>
                         </div>
                         <!-- Grid column -->
-
-                      </div>
+                      </form>
                       <!-- Grid row -->
 
                     </div>
@@ -604,9 +664,31 @@ Adquiere equipos GPS para tu flotilla y obtén precio especial. Los equipos Cal
             </footer>
             <!--/.Footer-->
 
+            <!-- Central Modal Medium Success -->
+            <div class="modal fade" id="centralModalSuccess" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+              <div class="modal-dialog modal-notify modal-success" role="document">
+                <!--Content-->
+                <div class="modal-content">
+                  <!--Header-->
+                  <div class="modal-header">
+                    <p class="heading lead">Gracias</p>
 
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Cerrar">
+                      <span aria-hidden="true" class="white-text">&times;</span>
+                    </button>
+                  </div>
 
-
+                  <!--Body-->
+                  <div class="modal-body">
+                    <div class="text-center">
+                      <span>Ala brevedad parte del equipo de Dogoit se comunicara</span>
+                    </div>
+                  </div>
+                </div>
+                <!--/.Content-->
+              </div>
+            </div>
+            <!-- Central Modal Medium Success-->
 
             <!-- SCRIPTS -->
             <!-- JQuery -->
@@ -617,6 +699,58 @@ Adquiere equipos GPS para tu flotilla y obtén precio especial. Los equipos Cal
             <script type="text/javascript" src="js/bootstrap.min.js"></script>
             <!-- MDB core JavaScript -->
             <script type="text/javascript" src="js/mdb.min.js"></script>
+<script>
+  // Example starter JavaScript for disabling form submissions if there are invalid fields
+  (function () {
+    'use strict';
+    window.addEventListener('load', function () {
+      // Fetch all the forms we want to apply custom Bootstrap validation styles to
+
+      var quoteForm = document.getElementById('quote_request');
+
+      quoteForm.addEventListener("submit", function (e) {
+        // stop form from submitting
+        e.preventDefault();
+        e.stopPropagation();
+
+        var userId = document.getElementById('lead[email]').value;
+        var properties = {
+          'first_name': document.getElementById('lead[first_name]').value,
+          'last_name': document.getElementById('lead[last_name]').value,
+          'email': document.getElementById('lead[email]').value,
+          'mobile_number': document.getElementById('lead[mobile_number]').value,
+          'company': {
+            'name': document.getElementById('lead[company][name]').value,
+          },
+          'job_title': document.getElementById('lead[job_title]').value,
+          'deal': {
+            'name': document.getElementById('lead[deal][name]').value,
+            'amount': document.getElementById('lead[deal][amount]').value,
+          },
+        };
+
+        quoteForm.classList.add('was-validated');
+
+        if (quoteForm.checkValidity()){
+          freshsales.identify(userId, properties, successCallback, failureCallback);
+        }
+      })
+
+      function successCallback(res) {
+        console.log('success', res);
+        $('#centralModalSuccess').modal();
+        quoteForm.reset();
+        quoteForm.classList.remove('was-validated');
+        $('label.active').removeClass('active');
+      }
+
+      function failureCallback(e) {
+        console.log('failure', e);
+      }
+    }, false);
+  })();
+</script>
+
 </body>
 
 </html>
