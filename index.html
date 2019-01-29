@@ -664,32 +664,6 @@ Adquiere equipos GPS para tu flotilla y obtén precio especial. Los equipos Cal
             </footer>
             <!--/.Footer-->
 
-            <!-- Central Modal Medium Success -->
-            <div class="modal fade" id="centralModalSuccess" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-              <div class="modal-dialog modal-notify modal-success" role="document">
-                <!--Content-->
-                <div class="modal-content">
-                  <!--Header-->
-                  <div class="modal-header">
-                    <p class="heading lead">Gracias</p>
-
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Cerrar">
-                      <span aria-hidden="true" class="white-text">&times;</span>
-                    </button>
-                  </div>
-
-                  <!--Body-->
-                  <div class="modal-body">
-                    <div class="text-center">
-                      <span>Ala brevedad parte del equipo de Dogoit se comunicara</span>
-                    </div>
-                  </div>
-                </div>
-                <!--/.Content-->
-              </div>
-            </div>
-            <!-- Central Modal Medium Success-->
-
             <!-- SCRIPTS -->
             <!-- JQuery -->
             <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
@@ -738,10 +712,10 @@ Adquiere equipos GPS para tu flotilla y obtén precio especial. Los equipos Cal
 
       function successCallback(res) {
         console.log('success', res);
-        $('#centralModalSuccess').modal();
         quoteForm.reset();
         quoteForm.classList.remove('was-validated');
         $('label.active').removeClass('active');
+        window.location.href = 'http://equiposgpscalamp.com/gracias.html';
       }
 
       function failureCallback(e) {
