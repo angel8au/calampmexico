@@ -582,10 +582,10 @@ src="https://www.facebook.com/tr?id=809446475833785&ev=PageView
                               required
                             >
                               <option value="" selected>Cantidad</option>
-                              <option value="1">1-49</option>
-                              <option value="50">50-99</option>
-                              <option value="100">100-499</option>
-                              <option value="500">500+</option>
+                              <option value="1-49">1-49</option>
+                              <option value="50-99">50-99</option>
+                              <option value="100-499">100-499</option>
+                              <option value="500+">500+</option>
                             </select>
                             <div class="invalid-feedback">Seleccione una cantidad</div>
                           </div>
@@ -731,17 +731,17 @@ src="https://www.facebook.com/tr?id=809446475833785&ev=PageView
 
         var userId = document.getElementById('lead[email]').value;
         var properties = {
-          'first_name': document.getElementById('lead[first_name]').value,
-          'last_name': document.getElementById('lead[last_name]').value,
-          'email': document.getElementById('lead[email]').value,
-          'mobile_number': document.getElementById('lead[mobile_number]').value,
+          'Nombre': document.getElementById('lead[first_name]').value,
+          'Apellido': document.getElementById('lead[last_name]').value,
+          'Email': document.getElementById('lead[email]').value,
+          'Móvil': document.getElementById('lead[mobile_number]').value,
+          'Cargo': document.getElementById('lead[job_title]').value,
           'company': {
-            'name': document.getElementById('lead[company][name]').value,
+            'Nombre de la empresa': document.getElementById('lead[company][name]').value,
           },
-          'job_title': document.getElementById('lead[job_title]').value,
           'deal': {
-            'name': document.getElementById('lead[deal][name]').value,
-            'amount': document.getElementById('lead[deal][amount]').value,
+            'Modelo de equipo solicitado': document.getElementById('lead[deal][name]').value,
+            'Cantidad de productos': document.getElementById('lead[deal][amount]').value,
           },
         };
 
